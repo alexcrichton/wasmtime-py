@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">96%</span>
+        </h1>
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+<div id="index">
+    <table class="index">
+        <thead>
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>2310</td>
+                <td>91</td>
+                <td>0</td>
+                <td class="right" data-ratio="2219 2310">96%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr class="file">
+                <td class="name left"><a href="download-wasmtime_py.html">download-wasmtime.py</a></td>
+                <td>42</td>
+                <td>35</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 42">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="examples_gcd_py.html">examples/gcd.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="examples_hello_py.html">examples/hello.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="examples_linking_py.html">examples/linking.py</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 12">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="examples_loader_py.html">examples/loader.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="examples_loader_python_target_py.html">examples/loader_python_target.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="examples_memory_py.html">examples/memory.py</a></td>
+                <td>50</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="49 50">98%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="examples_multi_py.html">examples/multi.py</a></td>
+                <td>31</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="31 31">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests___init___py.html">tests/__init__.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_config_py.html">tests/test_config.py</a></td>
+                <td>28</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="28 28">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_engine_py.html">tests/test_engine.py</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 13">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_func_py.html">tests/test_func.py</a></td>
+                <td>112</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="112 112">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_global_py.html">tests/test_global.py</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 29">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_instance_py.html">tests/test_instance.py</a></td>
+                <td>110</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="110 110">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_linker_py.html">tests/test_linker.py</a></td>
+                <td>75</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="75 75">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_memory_py.html">tests/test_memory.py</a></td>
+                <td>37</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="37 37">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_module_py.html">tests/test_module.py</a></td>
+                <td>104</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="104 104">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_store_py.html">tests/test_store.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_table_py.html">tests/test_table.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_trap_py.html">tests/test_trap.py</a></td>
+                <td>46</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="46 46">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_types_py.html">tests/test_types.py</a></td>
+                <td>80</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="80 80">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_value_py.html">tests/test_value.py</a></td>
+                <td>59</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="59 59">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_wasi_py.html">tests/test_wasi.py</a></td>
+                <td>48</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="48 48">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_test_wat2wasm_py.html">tests/test_wat2wasm.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_types_test_py.html">tests/types_test.py</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 11">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime___init___py.html">wasmtime/__init__.py</a></td>
+                <td>18</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 18">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__config_py.html">wasmtime/_config.py</a></td>
+                <td>65</td>
+                <td>9</td>
+                <td>0</td>
+                <td class="right" data-ratio="56 65">86%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__engine_py.html">wasmtime/_engine.py</a></td>
+                <td>19</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 19">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__extern_py.html">wasmtime/_extern.py</a></td>
+                <td>49</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="48 49">98%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__ffi_py.html">wasmtime/_ffi.py</a></td>
+                <td>120</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="119 120">99%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__func_py.html">wasmtime/_func.py</a></td>
+                <td>145</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="141 145">97%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__globals_py.html">wasmtime/_globals.py</a></td>
+                <td>42</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="40 42">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__instance_py.html">wasmtime/_instance.py</a></td>
+                <td>65</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="62 65">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__linker_py.html">wasmtime/_linker.py</a></td>
+                <td>61</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="58 61">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__memory_py.html">wasmtime/_memory.py</a></td>
+                <td>52</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="50 52">96%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__module_py.html">wasmtime/_module.py</a></td>
+                <td>66</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="66 66">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__store_py.html">wasmtime/_store.py</a></td>
+                <td>15</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 15">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__table_py.html">wasmtime/_table.py</a></td>
+                <td>26</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="24 26">92%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__trap_py.html">wasmtime/_trap.py</a></td>
+                <td>83</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="79 83">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__types_py.html">wasmtime/_types.py</a></td>
+                <td>320</td>
+                <td>17</td>
+                <td>0</td>
+                <td class="right" data-ratio="303 320">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__value_py.html">wasmtime/_value.py</a></td>
+                <td>85</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="81 85">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__wasi_py.html">wasmtime/_wasi.py</a></td>
+                <td>74</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="72 74">97%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime__wat2wasm_py.html">wasmtime/_wat2wasm.py</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 16">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="wasmtime_loader_py.html">wasmtime/loader.py</a></td>
+                <td>51</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="50 51">98%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v5.0.4</a>,
+            created at 2020-04-01 15:53
+        </p>
+    </div>
+</div>
+</body>
+</html>

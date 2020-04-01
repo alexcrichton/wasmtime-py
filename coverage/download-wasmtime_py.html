@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+    <title>Coverage for download-wasmtime.py: 17%</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="jquery.isonscreen.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.pyfile_ready);
+    </script>
+</head>
+<body class="pyfile">
+<div id="header">
+    <div class="content">
+        <h1>Coverage for <b>download-wasmtime.py</b> :
+            <span class="pc_cov">17%</span>
+        </h1>
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+        <h2 class="stats">
+            42 statements &nbsp;
+            <span class="run shortkey_r button_toggle_run">7 run</span>
+            <span class="mis show_mis shortkey_m button_toggle_mis">35 missing</span>
+            <span class="exc show_exc shortkey_x button_toggle_exc">0 excluded</span>
+        </h2>
+    </div>
+</div>
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">r</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        <span class="key">p</span> &nbsp; toggle line displays
+    </p>
+    <p class="keyhelp">
+        <span class="key">j</span>
+        <span class="key">k</span> &nbsp; next/prev highlighted chunk
+    </p>
+    <p class="keyhelp">
+        <span class="key">0</span> &nbsp; (zero) top of page
+    </p>
+    <p class="keyhelp">
+        <span class="key">1</span> &nbsp; (one) first highlighted chunk
+    </p>
+    </div>
+</div>
+<div id="source">
+    <p id="t1" class="pln"><span class="n"><a href="#t1">1</a></span><span class="t"><span class="com"># Helper script to download a precompiled binary of the wasmtime dll for the</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t2" class="pln"><span class="n"><a href="#t2">2</a></span><span class="t"><span class="com"># current platform. Currently always downloads the dev release of wasmtime.</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t3" class="pln"><span class="n"><a href="#t3">3</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t4" class="run"><span class="n"><a href="#t4">4</a></span><span class="t"><span class="key">import</span> <span class="nam">urllib</span><span class="op">.</span><span class="nam">request</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t5" class="run"><span class="n"><a href="#t5">5</a></span><span class="t"><span class="key">import</span> <span class="nam">zipfile</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t6" class="run"><span class="n"><a href="#t6">6</a></span><span class="t"><span class="key">import</span> <span class="nam">tarfile</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t7" class="run"><span class="n"><a href="#t7">7</a></span><span class="t"><span class="key">import</span> <span class="nam">io</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t8" class="run"><span class="n"><a href="#t8">8</a></span><span class="t"><span class="key">import</span> <span class="nam">sys</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t9" class="pln"><span class="n"><a href="#t9">9</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t10" class="pln"><span class="n"><a href="#t10">10</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t11" class="run"><span class="n"><a href="#t11">11</a></span><span class="t"><span class="key">def</span> <span class="nam">main</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t12" class="mis show_mis"><span class="n"><a href="#t12">12</a></span><span class="t">    <span class="nam">is_zip</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t13" class="mis show_mis"><span class="n"><a href="#t13">13</a></span><span class="t">    <span class="key">if</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span> <span class="op">==</span> <span class="str">'linux'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t14" class="mis show_mis"><span class="n"><a href="#t14">14</a></span><span class="t">        <span class="nam">filename</span> <span class="op">=</span> <span class="str">'wasmtime-dev-x86_64-linux-c-api.tar.xz'</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t15" class="mis show_mis"><span class="n"><a href="#t15">15</a></span><span class="t">    <span class="key">elif</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span> <span class="op">==</span> <span class="str">'win32'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t16" class="mis show_mis"><span class="n"><a href="#t16">16</a></span><span class="t">        <span class="nam">filename</span> <span class="op">=</span> <span class="str">'wasmtime-dev-x86_64-windows-c-api.zip'</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t17" class="mis show_mis"><span class="n"><a href="#t17">17</a></span><span class="t">        <span class="nam">is_zip</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t18" class="mis show_mis"><span class="n"><a href="#t18">18</a></span><span class="t">    <span class="key">elif</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span> <span class="op">==</span> <span class="str">'darwin'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t19" class="mis show_mis"><span class="n"><a href="#t19">19</a></span><span class="t">        <span class="nam">filename</span> <span class="op">=</span> <span class="str">'wasmtime-dev-x86_64-macos-c-api.tar.xz'</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t20" class="pln"><span class="n"><a href="#t20">20</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t21" class="mis show_mis"><span class="n"><a href="#t21">21</a></span><span class="t">        <span class="key">raise</span> <span class="nam">RuntimeError</span><span class="op">(</span><span class="str">"unknown platform: "</span> <span class="op">+</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t22" class="pln"><span class="n"><a href="#t22">22</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t23" class="mis show_mis"><span class="n"><a href="#t23">23</a></span><span class="t">    <span class="nam">url</span> <span class="op">=</span> <span class="str">'https://github.com/bytecodealliance/wasmtime/releases/download/dev/'</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t24" class="mis show_mis"><span class="n"><a href="#t24">24</a></span><span class="t">    <span class="nam">url</span> <span class="op">+=</span> <span class="nam">filename</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t25" class="mis show_mis"><span class="n"><a href="#t25">25</a></span><span class="t">    <span class="nam">print</span><span class="op">(</span><span class="str">'Download'</span><span class="op">,</span> <span class="nam">url</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t26" class="pln"><span class="n"><a href="#t26">26</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t27" class="mis show_mis"><span class="n"><a href="#t27">27</a></span><span class="t">    <span class="key">with</span> <span class="nam">urllib</span><span class="op">.</span><span class="nam">request</span><span class="op">.</span><span class="nam">urlopen</span><span class="op">(</span><span class="nam">url</span><span class="op">)</span> <span class="key">as</span> <span class="nam">f</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t28" class="mis show_mis"><span class="n"><a href="#t28">28</a></span><span class="t">        <span class="nam">contents</span> <span class="op">=</span> <span class="nam">f</span><span class="op">.</span><span class="nam">read</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t29" class="pln"><span class="n"><a href="#t29">29</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t30" class="mis show_mis"><span class="n"><a href="#t30">30</a></span><span class="t">    <span class="key">if</span> <span class="nam">is_zip</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t31" class="mis show_mis"><span class="n"><a href="#t31">31</a></span><span class="t">        <span class="nam">t</span> <span class="op">=</span> <span class="nam">zipfile</span><span class="op">.</span><span class="nam">ZipFile</span><span class="op">(</span><span class="nam">io</span><span class="op">.</span><span class="nam">BytesIO</span><span class="op">(</span><span class="nam">contents</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t32" class="mis show_mis"><span class="n"><a href="#t32">32</a></span><span class="t">        <span class="key">for</span> <span class="nam">member</span> <span class="key">in</span> <span class="nam">t</span><span class="op">.</span><span class="nam">namelist</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t33" class="mis show_mis"><span class="n"><a href="#t33">33</a></span><span class="t">            <span class="key">if</span> <span class="key">not</span> <span class="nam">member</span><span class="op">.</span><span class="nam">endswith</span><span class="op">(</span><span class="str">'.dll'</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t34" class="mis show_mis"><span class="n"><a href="#t34">34</a></span><span class="t">                <span class="key">continue</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t35" class="mis show_mis"><span class="n"><a href="#t35">35</a></span><span class="t">            <span class="nam">contents</span> <span class="op">=</span> <span class="nam">t</span><span class="op">.</span><span class="nam">read</span><span class="op">(</span><span class="nam">member</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t36" class="mis show_mis"><span class="n"><a href="#t36">36</a></span><span class="t">            <span class="key">with</span> <span class="nam">open</span><span class="op">(</span><span class="str">"wasmtime/wasmtime.pyd"</span><span class="op">,</span> <span class="str">"wb"</span><span class="op">)</span> <span class="key">as</span> <span class="nam">f</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t37" class="mis show_mis"><span class="n"><a href="#t37">37</a></span><span class="t">                <span class="nam">f</span><span class="op">.</span><span class="nam">write</span><span class="op">(</span><span class="nam">contents</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t38" class="mis show_mis"><span class="n"><a href="#t38">38</a></span><span class="t">            <span class="nam">sys</span><span class="op">.</span><span class="nam">exit</span><span class="op">(</span><span class="num">0</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t39" class="pln"><span class="n"><a href="#t39">39</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t40" class="mis show_mis"><span class="n"><a href="#t40">40</a></span><span class="t">        <span class="nam">t</span> <span class="op">=</span> <span class="nam">tarfile</span><span class="op">.</span><span class="nam">open</span><span class="op">(</span><span class="nam">fileobj</span><span class="op">=</span><span class="nam">io</span><span class="op">.</span><span class="nam">BytesIO</span><span class="op">(</span><span class="nam">contents</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t41" class="mis show_mis"><span class="n"><a href="#t41">41</a></span><span class="t">        <span class="key">for</span> <span class="nam">member</span> <span class="key">in</span> <span class="nam">t</span><span class="op">.</span><span class="nam">getmembers</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t42" class="mis show_mis"><span class="n"><a href="#t42">42</a></span><span class="t">            <span class="nam">linux_so</span> <span class="op">=</span> <span class="nam">member</span><span class="op">.</span><span class="nam">name</span><span class="op">.</span><span class="nam">endswith</span><span class="op">(</span><span class="str">'.so'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t43" class="mis show_mis"><span class="n"><a href="#t43">43</a></span><span class="t">            <span class="nam">macos_dylib</span> <span class="op">=</span> <span class="nam">member</span><span class="op">.</span><span class="nam">name</span><span class="op">.</span><span class="nam">endswith</span><span class="op">(</span><span class="str">'.dylib'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t44" class="mis show_mis"><span class="n"><a href="#t44">44</a></span><span class="t">            <span class="key">if</span> <span class="key">not</span> <span class="nam">linux_so</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">macos_dylib</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t45" class="mis show_mis"><span class="n"><a href="#t45">45</a></span><span class="t">                <span class="key">continue</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t46" class="mis show_mis"><span class="n"><a href="#t46">46</a></span><span class="t">            <span class="nam">contents</span> <span class="op">=</span> <span class="nam">t</span><span class="op">.</span><span class="nam">extractfile</span><span class="op">(</span><span class="nam">member</span><span class="op">)</span><span class="op">.</span><span class="nam">read</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t47" class="mis show_mis"><span class="n"><a href="#t47">47</a></span><span class="t">            <span class="key">with</span> <span class="nam">open</span><span class="op">(</span><span class="str">"wasmtime/wasmtime.pyd"</span><span class="op">,</span> <span class="str">"wb"</span><span class="op">)</span> <span class="key">as</span> <span class="nam">f</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t48" class="mis show_mis"><span class="n"><a href="#t48">48</a></span><span class="t">                <span class="nam">f</span><span class="op">.</span><span class="nam">write</span><span class="op">(</span><span class="nam">contents</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t49" class="mis show_mis"><span class="n"><a href="#t49">49</a></span><span class="t">            <span class="nam">sys</span><span class="op">.</span><span class="nam">exit</span><span class="op">(</span><span class="num">0</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t50" class="pln"><span class="n"><a href="#t50">50</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t51" class="mis show_mis"><span class="n"><a href="#t51">51</a></span><span class="t">    <span class="key">raise</span> <span class="nam">RuntimeError</span><span class="op">(</span><span class="str">"failed to find dynamic library"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t52" class="pln"><span class="n"><a href="#t52">52</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t53" class="pln"><span class="n"><a href="#t53">53</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p id="t54" class="run"><span class="n"><a href="#t54">54</a></span><span class="t"><span class="key">if</span> <span class="nam">__name__</span> <span class="op">==</span> <span class="str">'__main__'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p id="t55" class="mis show_mis"><span class="n"><a href="#t55">55</a></span><span class="t">    <span class="nam">main</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+</div>
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v5.0.4</a>,
+            created at 2020-04-01 15:53
+        </p>
+    </div>
+</div>
+</body>
+</html>
